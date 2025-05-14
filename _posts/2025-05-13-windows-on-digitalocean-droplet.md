@@ -20,21 +20,21 @@ authors:
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 
 toc:
-  - name: "🚀 Part 1: Create Ubuntu droplet (VM1) for preparing the Windows Image"
+  - name: "Part 1: Create Ubuntu droplet (VM1) for preparing the Windows Image"
     url: "#part-1"
-  - name: "🛠️ Part 2: Prepare Windows Image"
+  - name: "Part 2: Prepare Windows Image"
     url: "#part-2"
-  - name: "⚙️ Part 3: Windows Configuration"
+  - name: "Part 3: Windows Configuration"
     url: "#part-3"
-  - name: "🗜️ Part 4: Compress Windows Hard Disk and Use it"
+  - name: "Part 4: Compress Windows Hard Disk and Use it"
     url: "#part-4"
-  - name: "🖥️ Part 5: Create New Ubuntu droplet (VM2) for running the Windows"
+  - name: "Part 5: Create New Ubuntu droplet (VM2) for running the Windows"
     url: "#part-5"
-  - name: "🌐 Part 6: Network Configuration in Windows"
+  - name: "Part 6: Network Configuration in Windows"
     url: "#part-6"
-  - name: "✅ Part 7: Hurray, finally you have configured your Windows machine on droplet"
+  - name: "Part 7: Hurray, finally you have configured your Windows machine on droplet"
     url: "#part-7"
-  - name: "💾 Part 8: Allocate Unused Storage (Optional)"
+  - name: "Part 8: Allocate Unused Storage (Optional)"
     url: "#part-8"
 
 
@@ -75,7 +75,7 @@ _styles: >
 
 <a name="part-1"></a>
 
-## 🚀 Part 1: Create Ubuntu droplet (VM1) for preparing the Windows Image
+## Part 1: Create Ubuntu droplet (VM1) for preparing the Windows Image
 
 ### 1. Create Ubuntu Virtual Machine on DigitalOcean
 - Choose Ubuntu 22, 24 or any LTS support version.
@@ -152,7 +152,7 @@ PS: This will take little longer based on your Internet Speed.
 
 <a name="part-2"></a>
 
-## 🛠️ Part 2: Prepare Windows Image 
+## Part 2: Prepare Windows Image 
 
 ### 7. Create a Virtual Disk
 Open the terminal and SSH to your droplet (VM1) as done in Step 2. Run the below commands and create a virtual disk of the required size. This disk size will be the System Directory (Local Disk C) for installing Windows. You can give the required size as per the requirements for your preferred Windows you want to install. In my case I am installing Windows 10 Pro, where `80 GB` is good enough to install it.  
@@ -229,7 +229,7 @@ Click `Load Driver` → Enter the VirtIO CD (shown in SS) → Select Balloon
 
 <a name="part-3"></a>
 
-## ⚙️ Part 3: Windows Configuration
+## Part 3: Windows Configuration
 
 ### 10. Inside Windows Desktop
 After installing the Windows, configure the below settings:
@@ -281,7 +281,7 @@ After installing the Windows, configure the below settings:
 
 <a name="part-4"></a>
 
-## 🗜️ Part 4: Compress Windows Hard Disk and Use it
+## Part 4: Compress Windows Hard Disk and Use it
  Login to the droplet using SSH as done in Step 2. Go to the Downloads folder where you have your **wins_harddisk.raw** file.
 
 ### 11. Gzip the Virtual Hard Disk
@@ -310,7 +310,7 @@ You can preserve this file, store it in your any web location from you can easil
 
 <a name="part-5"></a>
 
-## 🖥️ Part 5: Create New Ubuntu droplet (VM2) for running the Windows
+## Part 5: Create New Ubuntu droplet (VM2) for running the Windows
 This is crucial step where we are actually going to uncompress the `.gz` windows disk and start using Windows.
 
 ### 14. Create New Droplet (VM2) on DigitalOcean
@@ -365,7 +365,7 @@ $ wget -O- http://<VM1_IP>/windows2010.gz | gunzip | dd of=/dev/<vda/sda>
 
 <a name="part-6"></a>
 
-## 🌐 Part 6: Network Configuration in Windows
+## Part 6: Network Configuration in Windows
 
 To configure internet in the Windows machine on droplet VM2, follow the below steps:
 
@@ -396,7 +396,7 @@ To configure internet in the Windows machine on droplet VM2, follow the below st
 
 <a name="part-7"></a>
 
-## ✅ Part 7: Hurray, finally you have configured your Windows machine on droplet
+## Part 7: Hurray, finally you have configured your Windows machine on droplet
 
 - **Linux User**: Use Remmina Client 
   - Enter the IP address and Port `ip:port` which is configured for RDP on Windows Machine. Hit Enter.
@@ -417,9 +417,9 @@ Start using your Windows on the droplet VM2. You can preserve that **windows10.g
 
 <a name="part-8"></a>
 
-## 💾 Part 8: Allocate Unused Storage (Optional)
-- Search "Create and format hard disk partitions"
-- Use unallocated space to create new disk
+## Part 8: Allocate Unused Storage (Optional)
+- Open **Create and format hard disk partitions** from Start menu.
+- Create the disk out of unallocated space (if any).
 
 
 
