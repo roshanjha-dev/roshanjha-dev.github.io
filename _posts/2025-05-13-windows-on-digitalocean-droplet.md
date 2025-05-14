@@ -26,15 +26,15 @@ toc:
     url: "#part-2"
   - name: "⚙️ Part 3: Windows Configuration"
     url: "#part-3"
-  - name: "💽 Part 4: Compress Windows Hard Disk and Use it"
+  - name: "🗜️ Part 4: Compress Windows Hard Disk and Use it"
     url: "#part-4"
-  - name: "💻 Part 5: Create New Ubuntu droplet (VM2) for running the Windows"
+  - name: "🖥️ Part 5: Create New Ubuntu droplet (VM2) for running the Windows"
     url: "#part-5"
   - name: "🌐 Part 6: Network Configuration in Windows"
     url: "#part-6"
   - name: "✅ Part 7: Hurray, finally you have configured your Windows machine on droplet"
     url: "#part-7"
-  - name: "📦 Part 8: Allocate Unused Storage (Optional)"
+  - name: "💾 Part 8: Allocate Unused Storage (Optional)"
     url: "#part-8"
 
 
