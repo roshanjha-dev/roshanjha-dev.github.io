@@ -22,6 +22,43 @@
       <!-- Page/Post style -->
       <style type="text/css">
         {{ page._styles }}
+        .custom-byline-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin: 1rem 0; /* Reduced from 2rem */
+        }
+
+        .custom-byline {
+          width: 100%;
+          max-width: 1000px;
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+          font-size: 0.9rem;
+          flex-wrap: wrap;
+          padding: 0; /* Removed padding */
+        }
+
+        .custom-byline .byline-block {
+          flex: 1;
+          min-width: 150px;
+          margin: 0; /* Reset any margin */
+        }
+
+        .custom-byline .heading {
+          display: block;
+          font-weight: bold;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          color: #666;
+          margin-bottom: 0.15rem; /* Reduced spacing between heading and content */
+        }
+
+        d-byline {
+          display: none;
+        }
+
       </style>
     {% endif %}
   </head>
@@ -76,7 +113,31 @@
         <p>{{ page.description }}</p>
       </d-title>
       {% if page.authors %}
-        <d-byline></d-byline>
+        {% comment %} <d-byline></d-byline> {% endcomment %}
+        <div class="custom-byline-wrapper">
+          <div class="custom-byline">
+            <div class="byline-block">
+              <span class="heading">AUTHORS</span><br />
+              <strong>{{ page.authors[0].name }}</strong>
+            </div>
+            <div class="byline-block">
+              <span class="heading">READING TIME</span><br />
+              {% if page.external_source == blank %}
+                {% assign read_time = content | number_of_words | divided_by: 180 | plus: 1 %}
+              {% else %}
+                {% assign read_time = page.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+              {% endif %}
+              <span>{{ read_time }} minute{% if read_time > 1 %}s{% endif %}</span>
+            </div>
+            <div class="byline-block">
+              <span class="heading">PUBLISHED</span><br />
+              {{ page.date | date: "%B %d, %Y" }}
+            </div>
+          </div>
+        </div>
+
+
+        
       {% endif %}
 
       <d-article>

@@ -1,7 +1,7 @@
 ---
 layout: distill
-title: How to run Windows Professional on Digital Ocean Cloud Virtual Machine from Scratch
-description: Steps to run a Windows machine on Ubuntu based DO Virtual Machine
+title: How to run Windows 10/11 Professional on Digital Ocean Cloud Virtual Machine from Scratch
+description: Steps to run a Windows machine on Ubuntu based Digital Ocean Droplet
 tags: cloud-vm windows
 giscus_comments: true
 date: 2025-05-13
