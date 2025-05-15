@@ -67,7 +67,7 @@ _styles: >
   }
 
   .zoom-img.zoomed {
-    transform: scale(2); /* adjust zoom level */
+    transform: scale(1.4); /* adjust zoom level */
     cursor: zoom-out;
     z-index: 10;
   }
@@ -357,7 +357,7 @@ $ wget -O- http://<VM1_IP>/windows2010.gz | gunzip | dd of=/dev/<vda/sda>
 
 - **Turn off droplet (VM2)**
 - Switch boot to **Hard Drive**
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/switch_to_recovery_boot.png" alt="switch to hard drive" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/windows-on-digitalocean-droplet/switch_back_to_boot_from_hard_drive.png" alt="switch to hard drive" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 - Turn **on** machine
 
