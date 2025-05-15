@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 
 Research Scholar, Computer Science, IIT Bombay
 
-I am Roshan, currently pursuing a Doctor of Philosophy (PhD) at IIT Bombay under the supervision of Prof. Devashish Gosain. My research is focused on Privacy and Network Security. Prior to this, I completed my Master of Technology (MTech) from IIT Bhilai under the guidance of Prof. Dhiman Saha and Prof. Santosh Biswas. I also bring industry experience from my tenure as a Software Engineer at Persistent Systems Ltd., where I honed my skills in software development and engineering practices.
+I am Roshan, currently pursuing a Doctor of Philosophy (PhD) at IIT Bombay under the supervision of [Prof. Devashish Gosain](https://www.devashishgosain.com/). My research is focused on Privacy and Network Security. Prior to this, I completed my Master of Technology (MTech) from IIT Bhilai under the guidance of [Prof. Dhiman Saha](http://dhimans.in/) and [Prof. Santosh Biswas](https://www.iitbhilai.ac.in/index.php?pid=santosh). I also bring industry experience from my tenure as a Software Engineer at [Persistent Systems Ltd.](https://www.persistent.com/), where I honed my skills in software development and engineering practices.
 
 As a dedicated student and developer, I am deeply engaged in the field of Computer Science. I am proficient in a variety of programming languages including C, C++, Java, Android, and Python, with a strong foundation in competitive coding, especially in Java. I am consistently driven by a desire to explore emerging technologies and deepen my understanding of new programming paradigms and tools.
 
