@@ -16,13 +16,15 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Research Scholar, Computer Science, IIT Bombay
+***Research Scholar, Computer Science, IIT Bombay***
 
-I am Roshan, currently pursuing a Doctor of Philosophy (PhD) at IIT Bombay under the supervision of [Prof. Devashish Gosain](https://www.devashishgosain.com/). My research is focused on Privacy and Network Security. Prior to this, I completed my Master of Technology (MTech) from IIT Bhilai under the guidance of [Prof. Dhiman Saha](http://dhimans.in/) and [Prof. Santosh Biswas](https://www.iitbhilai.ac.in/index.php?pid=santosh). I also bring industry experience from my tenure as a Software Engineer at [Persistent Systems Ltd.](https://www.persistent.com/), where I honed my skills in software development and engineering practices.
+Currently pursuing a Doctor of Philosophy (PhD) at IIT Bombay under the supervision of [Prof. Devashish Gosain](https://www.devashishgosain.com/). My research is focused on Privacy and Network Security. Prior to this, I completed my Master of Technology (MTech) from IIT Bhilai under the guidance of [Prof. Dhiman Saha](https://www.iitbhilai.ac.in/index.php?pid=dhiman) and [Prof. Santosh Biswas](https://www.iitbhilai.ac.in/index.php?pid=santosh) and my BTech from JECRC (RTU Kota). I also have industry experience as a Software Engineer at [Persistent Systems Ltd.](https://www.persistent.com/), where I strengthened my software development and engineering skills.
 
 As a dedicated student and developer, I am deeply engaged in the field of Computer Science. I am proficient in a variety of programming languages including C, C++, Java, Android, and Python, with a strong foundation in competitive coding, especially in Java. I am consistently driven by a desire to explore emerging technologies and deepen my understanding of new programming paradigms and tools.
 
-In addition to software development, I have a keen interest in hardware engineering, particularly in assessing the security of hardware systems. My research aims to uncover vulnerabilities and enhance robustness in cybersecurity, systems, and networking. I am particularly enthusiastic in Android development. Outside the academic and research domains, I enjoy playing badminton, computer gaming, and engaging with others to exchange knowledge and provide support in a range of technical and non-technical areas.
+Along with software development, I’m interested in research that improves the security and performance of systems, especially in cybersecurity, networking, and operating systems. Outside of work, I like playing badminton, gaming, and sharing knowledge in both tech and non-tech areas.
+
+Associated with **Security, Cyber Anonymity & Networks (SCAN) Lab**
 
 ### Research Interests
 - Privacy and Network Security

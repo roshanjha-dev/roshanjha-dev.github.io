@@ -176,6 +176,77 @@
       {% if site.giscus.repo and page.giscus_comments %}
         {% include giscus.liquid %}
       {% endif %}
+
+      {% comment %} <!-- Suggested Blogs Section -->
+      {% assign current_author = page.authors[0].name %}
+      {% assign suggested_posts = site.posts | where_exp:"post", "post.authors[0].name == current_author" | where_exp:"post", "post.url != page.url" | limit:3 %}
+
+      {% if suggested_posts.size > 0 %}
+        <div class="custom-byline-wrapper">
+          <div class="custom-byline" style="flex-direction: column; align-items: flex-start; padding: 1rem;">
+            <h3 style="width: 100%; font-size: 1.25rem; margin-bottom: 1rem;">Suggested Blogs</h3>
+            <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0;">
+              {% for post in suggested_posts %}
+                <li style="margin-bottom: 0.75rem;">
+                  <a href="{{ post.url | relative_url }}" style="font-weight: 500; font-size: 1rem; color: #007acc;">
+                    {{ post.title }}
+                  </a>
+                  <br />
+                  <span style="font-size: 0.85rem; color: #666;">
+                    {{ post.date | date: "%B %d, %Y" }}
+                  </span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endif %} {% endcomment %}
+
+      {% assign current_author = page.authors[0].name %}
+      {% assign suggested_posts = site.posts | where_exp:"post", "post.authors[0].name == current_author" | where_exp:"post", "post.url != page.url" | limit: 3 %}
+      {% if suggested_posts.size > 0 %}
+      <br />
+      <div class="container featured-posts">
+        <h3 class="mb-4">Suggested Blogs</h3>
+        {% assign is_even = suggested_posts.size | modulo: 2 %}
+        <div class="row row-cols-{% if suggested_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
+          {% for post in suggested_posts %}
+            <div class="col mb-4">
+              <a href="{{ post.url | relative_url }}">
+                <div class="card hoverable h-100">
+                  <div class="row g-0">
+                    <div class="col-md-12">
+                      <div class="card-body">
+                        <div class="float-right">
+                          <i class="fa-solid fa-link fa-xs"></i>
+                        </div>
+                        <h3 class="card-title text-lowercase">{{ post.title }}</h3>
+                        <p class="card-text">{{ post.description }}</p>
+
+                        {% if post.external_source == blank %}
+                          {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+                        {% else %}
+                          {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+                        {% endif %}
+                        {% assign year = post.date | date: "%Y" %}
+
+                        <p class="post-meta">
+                          {{ read_time }} min read &nbsp; &middot; &nbsp;
+                          <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl }}">
+                            <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <hr>
+      {% endif %}
     </div>
 
     <!-- Footer -->

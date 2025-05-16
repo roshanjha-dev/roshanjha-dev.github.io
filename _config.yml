@@ -131,8 +131,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Welcome to my Blog # blog_name will be displayed in your blog page
-# blog_description: a simple whitespace theme for academics
+blog_name: My Tech Trail # blog_name will be displayed in your blog page
+blog_description: A space for curious minds in the world of tech — thoughts, experiments, and everything in between.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
