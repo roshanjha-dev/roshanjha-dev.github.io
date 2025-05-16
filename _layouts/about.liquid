@@ -8,10 +8,18 @@ layout: default
   <div style="background-color:#eef6ff; padding: 8px; display: inline-block; border-radius: 0px; margin-bottom: 2px;">
     <h2 style="color:#4b6cb7; font-family:monospace; margin: 0; font-size: 20px;">Hello World!</h2>
   </div>
+
+  <style>
+    .intro-text {
+      font-style: italic;
+      color: #888; /* gray, for subtle contrast */
+      margin-right: 5px;
+    }
+  </style>
   
   <h1 class="post-title">
     {% if site.title == 'blank' %}
-      I'm {{ site.first_name }} <span class="font-weight-bold">{{ site.middle_name }}</span> {{ site.last_name }}
+      <span class="intro-text">I'm</span> {{ site.first_name }} <span class="font-weight-bold">{{ site.middle_name }}</span> {{ site.last_name }}
     {% else %}
       {{ site.title }}
     {% endif %}
