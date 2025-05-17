@@ -2,7 +2,8 @@
 layout: distill
 title: How to run Windows 10/11 Professional on Digital Ocean Cloud Virtual Machine from Scratch
 description: Steps to run a Windows machine on Ubuntu based Digital Ocean Droplet
-tags: cloud-vm digital-ocean windows droplet
+tags: cloud-vm digital-ocean windows droplet technical
+categories: blog
 giscus_comments: true
 date: 2025-05-13
 featured: true
@@ -30,6 +31,8 @@ toc:
     url: "#part-7"
   - name: "Part 8: Allocate Unused Storage (Optional)"
     url: "#part-8"
+  - name: "Part 9: Conclusion"
+    url: "#part-9"
 
 
 
@@ -71,7 +74,7 @@ _styles: >
 - Specs: **4 GB Memory** and **2 CPUs** as shown in the SS. This is minimum requirements I have taken for preparing Windows 10 Professional Image. You can take higher droplet specification if you want for Windows 11 Professional or any.
 
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/create_vm1.png" alt="VM1 Creation" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/create_vm1.png" alt="VM1 Creation" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 - Use **password-based login** instead of ssh login
 - Set and remember the password for later login to this droplet. Lets call this droplet as VM1.
@@ -104,7 +107,7 @@ $ sudo apt install remmina remmina-plugin-rdp remmina-plugin-vnc remmina-plugin-
 and then proceed with further steps for Linux.
 - Open Remmina → Enter VM1 IP → Full screen as shown in SS → Username: `root`, Password: VM1 password
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/remmina_login_gui_ubuntu.png" alt="VM1 Creation" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/remmina_login_gui_ubuntu.png" alt="VM1 Creation" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 -- **Windows**: If you are using Windows OS in your host machine, then simply follow below steps:
 
@@ -179,15 +182,15 @@ Choose the Custom installation method and reach to the screen of disk creation. 
 
 Click `Load Driver` → Enter the VirtIO CD (shown in SS) → Select Balloon 
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/select_driver.png" alt="Select Driver" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/select_driver.png" alt="Select Driver" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 → Select w10 (Select according to your version of windows you are installing) → Select amd64 → Click OK 
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/select_windows.png" alt="Select Driver" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/select_windows.png" alt="Select Driver" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 → select first path → Click Next to install
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/select_driver2.png" alt="Select Driver" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/select_driver2.png" alt="Select Driver" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 
 -- Repeat the same for remaining drivers listed below from VirtIO CD:
@@ -199,11 +202,11 @@ Click `Load Driver` → Enter the VirtIO CD (shown in SS) → Select Balloon
 
 -- After installing all the above drivers, the virtual disk will be displayed as shown below.
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/virtual_disk.png" alt="Virtual Disk" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/virtual_disk.png" alt="Virtual Disk" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 → Select the disk → Click Next to install
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/windows_install.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/windows_install.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 → Complete the installation and give a **Username** for your Windows machine and select a **STRONG** password (Use combination of alphabets, numbers, special symbols). Remember both the **Username** and **Password**.
 
@@ -235,15 +238,15 @@ After installing the Windows, configure the below settings:
    - Open **Windows Defender Firewall with Advanced Security** from Start menu.
    - Select all the inbound rules and disable all inbound rules.
    
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/disable_all_firewall_rules.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/disable_all_firewall_rules.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
    - Click on New Rule to add a new Inbound rule.
 
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/select_port.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/select_port.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
    - Allow inbound TCP port **18021** (Domain, Private, Public)
 
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/port_no.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/port_no.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
    
    - Name: **Rule 18021 for RDP**
 
@@ -253,11 +256,11 @@ After installing the Windows, configure the below settings:
    - Navigate to Local Policies\Security Options.
    - Find the Interactive logon option for CTRL+ALT+DEL. (as shwon in SS below) 
 
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/local_security_policy.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/local_security_policy.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
   
    - Double Click and Enable it.
    
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/enable_ctrl_alt_del.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/enable_ctrl_alt_del.png" alt="Windows Install" class="zoom-img" onclick="this.classList.toggle('zoomed')">
   
 
 5. **Shutdown the machine**
@@ -277,7 +280,7 @@ Compress the **wins_harddisk.raw** file and give a name as shown in below comman
 $ dd if=wins_harddisk.raw status=progress | gzip -c > windows2010.gz
 ```
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/gzip_harddisk.png" alt="compress disk" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/gzip_harddisk.png" alt="compress disk" class="zoom-img" onclick="this.classList.toggle('zoomed')">
   
 
 ### 13. Install Apache and Move `.gz` the compressed file to Web Directory
@@ -305,7 +308,7 @@ Select the minimum requirements according to your Windows you chose in previous 
 - Turn off the droplet.
 - Go to **Recovery Tab** → Boot from **Recovery ISO**
 
-<img src="/assets/img/blog/windows-on-digitalocean-droplet/switch_to_recovery_boot.png" alt="switch to recovery boot" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+<img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/switch_to_recovery_boot.png" alt="switch to recovery boot" class="zoom-img" onclick="this.classList.toggle('zoomed')">
   
 - Turn droplet **on**
 - Open **Recovery Console**
@@ -315,7 +318,7 @@ Select the minimum requirements according to your Windows you chose in previous 
 ### 15. In Recovery Console
 1. Press **6** to get bash prompt for Interactive Shell. 
 
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/recovery_console.png" alt="recovery console" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/recovery_console.png" alt="recovery console" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 2. *Check disk name*:
 
@@ -333,7 +336,7 @@ $ lsblk
 $ wget -O- http://<VM1_IP>/windows2010.gz | gunzip | dd of=/dev/<vda/sda>
 ```
 
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/download_windows.png" alt="download windows" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/download_windows.png" alt="download windows" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 
 ### 16. Switch back to Boot from Hard Drive
@@ -342,7 +345,7 @@ $ wget -O- http://<VM1_IP>/windows2010.gz | gunzip | dd of=/dev/<vda/sda>
 
 - **Turn off droplet (VM2)**
 - Switch boot to **Hard Drive**
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/switch_back_to_boot_from_hard_drive.png" alt="switch to hard drive" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/switch_back_to_boot_from_hard_drive.png" alt="switch to hard drive" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 - Turn **on** machine
 
@@ -356,13 +359,13 @@ To configure internet in the Windows machine on droplet VM2, follow the below st
 
 1. Go to Access tab and click **Launch Recovery Console** to open Windows in recovery mode.
    
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/launch_recovery_console.png" alt="launch recovery console" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/launch_recovery_console.png" alt="launch recovery console" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 2. Go to **View Network Connections** from Start menu.
 3. Double click first Ethernet interface **Ethernet Instance 0 2** and go to **Properties**.
 4. Go to **Internet Protocol Version 4 (TCP/IPv4) > Properties** and give the IPs and Gateway manually, same as displayed at the bottom.
 
-   <img src="/assets/img/blog/windows-on-digitalocean-droplet/configure_ip_gateway2.png" alt="configure ip" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/configure_ip_gateway2.png" alt="configure ip" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 5. Set:
    - **IP address**
@@ -387,14 +390,14 @@ To configure internet in the Windows machine on droplet VM2, follow the below st
   - Enter the IP address and Port `ip:port` which is configured for RDP on Windows Machine. Hit Enter.
   - Enter the Username, Password and Click OK and start using.
 
-  <img src="/assets/img/blog/windows-on-digitalocean-droplet/login_using_remmina.png" alt="login using remmina" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+  <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/login_using_remmina.png" alt="login using remmina" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 - **Windows User**: Use **Remote Desktop Connection**
   - Enter the IP address and Port `ip:port` which you configured for RDP on your Windows Machine.
   - Enter the username. Click Connect.
   - Enter the Password.
   
-  <img src="/assets/img/blog/windows-on-digitalocean-droplet/login_using_rdp.png" alt="login using rdp" class="zoom-img" onclick="this.classList.toggle('zoomed')">
+  <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/login_using_rdp.png" alt="login using rdp" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 Start using your Windows on the droplet VM2. You can preserve that **windows10.gz** file for later use and you can remove the droplet VM1 which you created in Part 1 for preparing Windows Disk.
 
@@ -409,4 +412,13 @@ Start using your Windows on the droplet VM2. You can preserve that **windows10.g
 
 ---
 
-Stay tuned for more blogs
+<a name="part-9"></a>
+
+## Part 9: Conclusion
+
+Finally, we have successfully configured the Windows 10 on the Digital Ocean droplet from scratch. The same procedure can be followed for running any version of Windows.  
+
+
+---
+
+Thank you :blush: and [Stay tuned for more blogs]({{ site.url }}/blog/) 
