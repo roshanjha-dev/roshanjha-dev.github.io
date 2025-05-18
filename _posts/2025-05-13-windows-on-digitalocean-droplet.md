@@ -368,7 +368,7 @@ $ wget -O- http://<VM1_IP>/windows2010.gz | gunzip | dd of=/dev/<vda/sda>
 
    <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/download_windows.png" alt="download windows" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
-Be patient, sit back and relax! Its almost done. This step gonna take time in this new droplet VM2.
+Be patient, sit back and relax! Its almost done. This step gonna take time in this new droplet VM2. When its done, close the console.
 
 
 ### 16. Switch back to Boot from Hard Drive
@@ -419,13 +419,13 @@ To configure internet in the Windows machine on droplet VM2, follow the below st
 ## Part 7: Hurray, finally you have configured your Windows machine on droplet
 
 - **Linux User**: Use Remmina Client 
-  - Enter the VM2 IP address and Port in the format `ip:port` which you had configured for RDP on Windows Machine. Hit Enter.
+  - Select RDP and enter the VM2 IP address and Port in the format `ip:port` which you had configured for RDP on Windows Machine. Hit Enter.
   - Enter the Username, Password and Click OK and start using.
 
   <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/login_using_remmina.png" alt="login using remmina" class="zoom-img" onclick="this.classList.toggle('zoomed')">
 
 - **Windows User**: Use **Remote Desktop Connection**
-  - Enter the IP address and Port `ip:port` which you configured for RDP on your Windows Machine.
+  - Enter the VM2 IP address and Port in the format `ip:port` which you had configured for RDP on your Windows Machine.
   - Enter the username. Click Connect.
   - Enter the Password.
   
