@@ -341,7 +341,7 @@ Select the minimum requirements according to your Windows version you chose in p
 <img src="/assets/img/blog/2025/windows-on-digitalocean-droplet/switch_to_recovery_boot.png" alt="switch to recovery boot" class="zoom-img" onclick="this.classList.toggle('zoomed')">
   
 - Turn **on** droplet. 
-- Open **Recovery Console** from top left, below droplet On/Off toggle button.
+- Open **Recovery Console** from top right, below droplet On/Off toggle button.
 
 
 

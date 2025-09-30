@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: roshan.png
+  image: roshan.jpeg    # roshan.png
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>IITB, Powai, Mumbai</p>
@@ -24,7 +24,7 @@ As a dedicated student and developer, I am deeply engaged in the field of Comput
 
 Along with software development, I’m interested in research that improves the security and performance of systems, especially in cybersecurity, networking, and operating systems. Outside of work, I like playing badminton, gaming, and sharing knowledge in both tech and non-tech areas.
 
-Associated with **Security, Cyber Anonymity & Networks (SCAN) Lab**
+Associated with **Obfuscating Networks for securitY and eXploration (ONYX) Lab**
 
 ### Research Interests
 - Privacy and Network Security

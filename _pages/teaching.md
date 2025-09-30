@@ -1,14 +1,15 @@
 ---
 layout: page
 permalink: /teaching/
-title: Teaching Assistant
-description: Few courses which I have been the TA of during my Master and PhD.
+title: Teaching
+description: Few courses in which I have worked as the TA during my Master and PhD.
 nav: true
 nav_order: 5
 ---
 
 ## Courses @ IIT Bombay
 
+- **Privacy Enhancing Technologies** – *Jul 2025 – Nov 2025*
 - **Operating Systems** – *Jan 2025 – Apr 2025*
 - **Computer Networks** – *Jul 2024 – Nov 2024*
 
